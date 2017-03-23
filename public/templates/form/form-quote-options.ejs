@@ -1,0 +1,24 @@
+<label for="">What type of insurance are you seeking?</label>
+ <div class="row">
+ 	<div class="form-group col-sm-6 col-sm-offset-3">
+		<input class="btn btn-default btn-lg btn-block"
+           	type="button"
+            name=""
+            value="full quote"
+            ui-sref="form.vehicle"
+            ng-click="quoteSelector('full quote'); removeClass(3)">
+  	  </input>
+	</div>
+</div>
+
+<div class="row">
+	<div class="form-group col-sm-6 col-sm-offset-3">
+		<input class="btn btn-default btn-lg btn-block"
+			type="button"
+			name=""
+			value="third party quote"
+			ui-sref="form.review"
+			ng-click="quoteSelector('third party quote'); removeClass(3)">
+    	</input>
+	</div>
+</div>

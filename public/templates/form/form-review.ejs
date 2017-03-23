@@ -1,0 +1,55 @@
+
+<pre>Quote Type: {{userInput.quote.selected }}</pre>
+
+<pre>
+First Name: {{userInput.personal.firstName}}<br/>
+Last Name: {{userInput.personal.lastName}} <br />
+Address: {{userInput.personal.address}} <br />
+Phone Number: {{userInput.personal.phoneNumber}}<br />
+Email: {{userInput.personal.email}}<br />
+Age: {{userInput.personal.age}}
+</pre>
+
+<pre>
+Make: {{userInput.vehicle.make}}<br />
+Model: {{userInput.vehicle.model}}<br/>
+Year: {{userInput.vehicle.year}}<br/>
+Value: {{userInput.vehicle.value}}
+</pre>
+
+<pre>Risk: {{userInput.risk.type}}</pre>
+
+<pre>
+Modified: {{userInput.modification.carModded}}<br />
+Details: {{userInput.modification.details}}<br />
+Certified: {{userInput.modification.modCertified}}
+</pre>
+
+<pre>
+License Type: {{userInput.license.type}}<br />
+Length: {{userInput.license.yearLength}}<br />
+Over Two Years: {{userInput.license.twoYearLength}}
+</pre>
+
+<pre>
+Previous Insurance: {{userInput.insurance.previousInsurance}}<br />
+Type of Insurance: {{userInput.insurance.insuranceSelecte}}<br />
+Over a Year: {{userInput.insurance.fullYear}}
+</pre>
+
+<pre>
+Previous Accident: {{userInput.accident.prevAccident}}<br />
+Accident Type: {{userInput.accident.accidentType}}<br />
+Details: {{userInput.accident.details}}<br />
+Fault: {{userInput.accident.atFault}}
+</pre>
+
+<div class="row">
+  <div class="col-sm-4 col-sm-offset-2">
+  	<button ui-sref="form.accident" class="btn btn-block btn-info">Back</button>
+  </div>
+
+  <div class="col-sm-4">
+  	<button ui-sref="form.premium" ng-click="premiumCalculate(); excessCalculate(); theftExcessCalculate(); addLead();" class="btn btn-block btn-info">Get Premium</button>
+  </div>
+</div>

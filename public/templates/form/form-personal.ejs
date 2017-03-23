@@ -1,0 +1,112 @@
+<label for=""></label>
+<div class="row">
+  <div class="col-sm-6">
+    <div class="form-group" ng-class="{ 'has-error' : userForm.firstName.$invalid && !userForm.firstName.$pristine }">
+      <label for="First Name">First Name:</label>
+      <input class="form-control"
+           name="firstName"
+           placeholder="John"
+           type="text"
+           ng-model="userInput.personal.firstName"
+           required>
+      </input>
+      <p ng-show="userForm.firstName.$invalid && !userForm.firstName.$pristine" class="help-block">Your name is required.</p>
+    </div>
+  </div>
+  <div class="col-sm-6">
+  
+  <div class="form-group" ng-class="{ 'has-error' : userForm.lastName.$invalid && !userForm.lastName.$pristine }">
+    <label for="Last Name">Last Name:</label>
+    <input class="form-control"
+           name="lastName"
+           placeholder="Doe"
+           type="text"
+           ng-model="userInput.personal.lastName"
+           required>
+    </input>
+    <p ng-show="userForm.lastName.$invalid && !userForm.lastName.$pristine" class="help-block">Your last name is required.</p>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <div class="form-group" ng-class="{ 'has-error' : userForm.address.$invalid && !userForm.address.$pristine }">
+      <label for="Address">Address:</label>
+
+    <div class="input-group">
+      <div class="input-group-addon"><span class="glyphicon glyphicon-home"></span></div>
+      <input class="form-control"
+           name="address"
+           placeholder="123 Main St."
+           type="text"
+           ng-model="userInput.personal.address"
+           required>
+      </input>
+    </div>
+
+      <p ng-show="userForm.address.$invalid && !userForm.address.$pristine" class="help-block">Your address is required.</p>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-5">
+    <div class="form-group" ng-class="{ 'has-error' : userForm.phone.$invalid && !userForm.phone.$pristine }">
+      <label for="Phone Number">Phone Number:</label>
+    
+    <div class="input-group">
+      <div class="input-group-addon"><span class="glyphicon glyphicon-earphone"></span></div>
+      <input class="form-control"
+           name="phone"
+           placeholder="0xx xxx xxxx"
+           type="tel"
+           ng-model="userInput.personal.phoneNumber"
+           required>
+      </input>
+    </div>
+
+      <p ng-show="userForm.phone.$invalid && !userForm.phone.$pristine" class="help-block">Your phone number is required.</p>
+    </div>
+  </div>
+
+  <div class="col-sm-5">
+    <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+      <label for="Email">Email:</label>
+
+    <div class="input-group">
+      <div class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></div>
+            <input class="form-control"
+           name="email"
+           placeholder="john.doe@gmail.com"
+           type="email"
+           ng-model="userInput.personal.email"
+           required>
+      </input>
+    </div>
+
+        <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
+    </div>
+  </div>
+
+  <div class="col-sm-2">
+    <div class="form-group" ng-class="{ 'has-error' : userForm.age.$invalid && !userForm.age.$pristine }">
+      <label for="">Age:</label>
+      <input class="form-control"
+           name="age"
+           type="number"
+           ng-model="userInput.personal.age"
+           required>
+      </input>
+      <p ng-show="userForm.age.$invalid && !userForm.age.$pristine" class="help-block">Enter a valid age.</p>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4 col-md-offset-4">
+  <button ui-sref="form.quote-options"
+        class="btn btn-block btn-info"
+        ng-disabled="!userForm.$valid || userForm.$pristine"
+        ng-click="removeClass(2)">
+        Next
+</button>
+</div>
